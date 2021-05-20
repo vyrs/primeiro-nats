@@ -1,0 +1,16 @@
+micronaut:
+  application:
+    name: primeiroNats
+
+cassandra:
+  default:
+    basic:
+      contact-points:
+        - 127.0.0.1:9042
+      session-keyspace: produto
+      load-balancing-policy:
+        local-datacenter: datacenter1
+nats:
+  addresses: ${nats_address:localhost}:4223
+  username: ${nats_username:guest}
+  password: ${nats_password:guest}
